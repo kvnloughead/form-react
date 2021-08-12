@@ -1,0 +1,39 @@
+@import url('./__content/popup__content.css');
+@import url('./__close-button/popup__close-button.css');
+@import url('./__title/popup__title.css');
+@import url('./__form/popup__form.css');
+@import url('./__input/popup__input.css');
+@import url('./__submit-button/popup__submit-button.css');
+
+.popup {
+  max-width: 430px;
+  width: 100%;
+  min-height: 330px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 34px 36px;
+  background-color: #fff;
+  border-radius: 6px; 
+  border: 1px solid black;
+  margin: auto;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+}
+
+.popup_visible {
+  visibility: visible;
+}
+
+@media screen and (max-width: 568px) {
+  .popup {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    margin-top: 73px;
+  }
+}
+

@@ -1,0 +1,44 @@
+@import url('./blocks/popup/popup.css');
+@import url('./blocks/popup/_is-opened/popup_is-opened.css');
+
+@font-face {
+  font-family: "Suiss Intl";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/vendor/SuisseIntl-Regular.otf") format("opentype")
+}
+
+.main {
+  font-family: "Suiss Intl";
+}
+
+.button { 
+  cursor: pointer;
+}
+
+.button_type_register {
+  width: 270px;
+  height: 75px;
+  font-size: 24px;
+  line-height: 36px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: none;
+  margin: auto;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  background-color: #007aff;
+  color: transparent;  
+  text-shadow: 0 0 0 white;
+}
+
+.paw {
+  margin-left: 8px;
+}
+
+.popup__form_visible {
+  visibility: visible;
+}
