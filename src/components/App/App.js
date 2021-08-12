@@ -1,14 +1,14 @@
-import './App.css';
+import React from 'react';
 
-function Button() {
+function Button({ onClick }) {
   return (
-    <button type="button" className="button button_type_register">Register your dog <i className="fas fa-paw paw"></i></button>
+    <button onClick={onClick} type="button" className="button button_type_register">Register your dog <i className="fas fa-paw paw"></i></button>
   );
 }
 
-function PopupWithForm() {
+function PopupWithForm({ isOpen }) {
   return (
-    <div className="popup popup_is-opened">
+    <div className={`popup ${isOpen ? 'popup_is-opened' : ''}`}>
       <button type="button" className="popup__close-button">Close</button>
       <h3 className="popup__title">Register your dog</h3>
       <form className="popup__form" name="new">
@@ -22,10 +22,16 @@ function PopupWithForm() {
 }
 
 function App() {
+  const [popupIsOpen, setPopupIsOpen] = React.useState(false);
+
+  const handleOpenPopup = () => {
+    setPopupIsOpen(true);
+  }
+
   return (
     <div className="App">
-      <Button />
-      <PopupWithForm />
+      <Button onClick={handleOpenPopup} />
+      <PopupWithForm isOpen={popupIsOpen} />
     </div>
   );
 }
